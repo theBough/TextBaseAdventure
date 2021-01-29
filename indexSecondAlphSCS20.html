@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Great Game</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 id="title">Text Base Adventure!</h1>
+    <div id="output">
+      <p> Welcome to my game you need to be really smart to play this.</br> I hope you are up for the the challenge</p>
+      </div>
+    <input type = "text" id="myText" autocomplete="off" onfocus="this.select()" onmouseup="return false"value = "Try typing h">
+    <script src="script.js"></script>
+    <script>
+        var cb = document.getElementById("myText");
+        cb.addEventListener("keyup", function(event){
+          event.preventDefault();
+          if(event.keyCode === 13){
+            gameStart();
+            document.getElementById("myText").focus();
+          }
+        });
+      </script>
+  </body>
+</html>
