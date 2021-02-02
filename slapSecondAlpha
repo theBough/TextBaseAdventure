@@ -1,0 +1,13 @@
+function slapOn(){
+  var input = document.getElementById("myText").value;
+
+  switch(input){
+    case "person":
+      msg.innerHTML += ">>>>" + input + "</br>You wind up, and unleash an open handed</br>slap right across the sleeping person's cheek.</br>You're mean."; 
+      isSlap = false; 
+      break;
+    default:
+      msg.innerHTML += ">>>>" + input + "</br>Sorry I don't understand this command";
+  }
+
+}
