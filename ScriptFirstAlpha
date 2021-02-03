@@ -1,0 +1,17 @@
+var op = document.getElementById("output");
+function gameStart(){
+  var input = document.getElementById("myText").value;
+  if(input == "h"){
+    op.innerHTML += help;
+  }
+}
+
+var help = '******************************************</br>\
+|     Here are the commands you can use in this game:</br>\
+|       h - help</br>\
+|       g - go in a direction</br>\
+|       m - to see the map</br>\
+|       i - inspect an item</br>\
+|       c - to see what you are carrying</br>\
+|       u - to use an item</br>\
+****************************************************';
