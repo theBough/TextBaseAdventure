@@ -1,10 +1,36 @@
+var isInspect = false;
 var op = document.getElementById("output");
+
 function gameStart(){
   var input = document.getElementById("myText").value;
-  if(input == "h"){
-    op.innerHTML += help;
+
+  if(isInspect){
+    inspectIsOn();
+  }else{
+    switch (input){
+    case "h":
+      op.innerHTML += help;
+      break;
+    case "i":
+      isInspect = true;
+      op.innerHTML += ">>>>> " + input + "</br> What would you like to inspect? </br>"
+      break;
+  }//end switch
   }
+  
 }
+
+function inspectIsOn(){
+    var input = document.getElementById("myText").value;
+    switch(input){
+      case "wooden switch":
+        op.innerHTML +=">>>> " + input + "</br> You play around with the wooden switch</br>and all of sudden the brakes let go</br>and the cart accelerates into darkness.</br> You are never heard from again.</br>Thanks for playing."
+        break;
+      case "starbucks coffee cup":
+        op.innerHTML +=">>>> " + input + "</br> You drink from the 5 year cup. Bad idea."
+      break;
+    }
+}//end function
 
 var help = '******************************************</br>\
 |     Here are the commands you can use in this game:</br>\
